@@ -121,5 +121,8 @@ namespace smashgg.net.Models.Tournaments
 
         [JsonProperty("venueName")]
         public string VenueName { get; set; }
+
+        [JsonProperty("links")]
+        public TournamentLinks Links { get; set; }
     }
 }
