@@ -5,6 +5,7 @@ using System.Text;
 using Newtonsoft.Json;
 
 using smashgg.net.Models.Interfaces;
+using smashgg.net.Models.Media;
 
 namespace smashgg.net.Models.Tournaments
 {
@@ -124,5 +125,8 @@ namespace smashgg.net.Models.Tournaments
 
         [JsonProperty("links")]
         public TournamentLinks Links { get; set; }
+
+        [JsonProperty("images")]
+        public List<Image> Images { get; set; }
     }
 }
