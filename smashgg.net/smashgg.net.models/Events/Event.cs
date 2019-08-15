@@ -137,13 +137,13 @@ namespace smashgg.net.Models.Events
         /// Gets or sets the last date attendees are able to create teams for team events.
         /// </summary>
         [JsonProperty("teamManagementDeadline")]
-        public int TeamManagementDeadline { get; set; }
+        public int? TeamManagementDeadline { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether this is a teams event, returns whether or not teams can set custom names.
         /// </summary>
         [JsonProperty("teamNameAllowed")]
-        public bool TeamNameAllowed { get; set; }
+        public bool? TeamNameAllowed { get; set; }
 
         /// <summary>
         /// Gets or sets the type of the event, whether an entrant will have one participant or multiple.
@@ -156,5 +156,7 @@ namespace smashgg.net.Models.Events
         /// </summary>
         [JsonProperty("videoGameId")]
         public int VideoGameId { get; set; }
+        
+        public StandingsBase Standings { get; set; }
     }
 }

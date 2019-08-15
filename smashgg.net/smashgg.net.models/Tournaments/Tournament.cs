@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 using Newtonsoft.Json;
-
+using smashgg.net.Models.Events;
 using smashgg.net.Models.Interfaces;
 using smashgg.net.Models.Media;
 
@@ -240,5 +240,11 @@ namespace smashgg.net.Models.Tournaments
         /// </summary>
         [JsonProperty("images")]
         public List<Image> Images { get; set; }
+        
+        /// <summary>
+        /// Gets or sets a collection of events.
+        /// </summary>
+        [JsonProperty("events")]
+        public List<Event> Events { get; set; }
     }
 }
