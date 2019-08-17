@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "smashgg.net.Api", "smashgg.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "smashgg.net.Logic", "smashgg.net.Logic\smashgg.net.Logic.csproj", "{F216375F-7AF1-4B28-984F-CBC7D9A32FB1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "smashgg.net.TestConsole", "smashgg.net.TestConsole\smashgg.net.TestConsole.csproj", "{530D2F15-7393-4BF9-BE0A-4A134F31478B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{F216375F-7AF1-4B28-984F-CBC7D9A32FB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F216375F-7AF1-4B28-984F-CBC7D9A32FB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F216375F-7AF1-4B28-984F-CBC7D9A32FB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{530D2F15-7393-4BF9-BE0A-4A134F31478B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{530D2F15-7393-4BF9-BE0A-4A134F31478B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{530D2F15-7393-4BF9-BE0A-4A134F31478B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{530D2F15-7393-4BF9-BE0A-4A134F31478B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +49,7 @@ Global
 		{C3D39AE0-29B2-4F56-B461-9AF805C94E79} = {80AB0DFE-080C-4877-A0EA-1F26319A127B}
 		{0D80BFDF-4D80-4B9E-A972-CA8846DC7A13} = {BF0353BF-4C3B-483E-901A-6226229AD640}
 		{F216375F-7AF1-4B28-984F-CBC7D9A32FB1} = {09EC6F36-7546-406A-BA08-B19DFE2986A4}
+		{530D2F15-7393-4BF9-BE0A-4A134F31478B} = {902F037A-853A-4E20-A829-DF91C8E5C6C4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {76DFAA08-5916-431B-A1C5-0324EB655644}
