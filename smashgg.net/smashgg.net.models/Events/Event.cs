@@ -157,6 +157,6 @@ namespace smashgg.net.Models.Events
         [JsonProperty("videoGameId")]
         public int VideoGameId { get; set; }
         
-        public StandingsBase Standings { get; set; }
+        public BaseNode<Standing> Standings { get; set; }
     }
 }

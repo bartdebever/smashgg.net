@@ -13,7 +13,7 @@ namespace smashgg.net.Logic.Querys.Events
         }
 
 
-        public async Task<List<Standing>> GetEventStandings(int eventId, int pageCount, int page)
+        public async Task<IEnumerable<Standing>> GetEventStandings(int eventId, int pageCount, int page)
         {
             var queryString =
                 "query EventStandings($eventId: ID!, $page: Int!, $perPage: Int!) {\n  event(id: $eventId) {\name\nstandings(query:{\nperPage: $perPage,\npage: $page\n}){\nnodes {\nstanding\nentrant{\nname}}}}}";
@@ -26,7 +26,7 @@ namespace smashgg.net.Logic.Querys.Events
             
             var eventObject = await ExecuteQueryAsync<Event>(graphQlRequest, "event");
 
-            return eventObject.Standings.Nodes;
+            return eventObject?.Standings?.Nodes;
         }
     }
 }

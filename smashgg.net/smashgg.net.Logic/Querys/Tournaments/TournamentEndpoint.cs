@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using GraphQL.Client;
@@ -10,10 +11,12 @@ namespace smashgg.net.Logic.Querys.Tournaments
 {
     public class TournamentEndpoint : GraphQlEndpoint, ITournamentEndpoint
     {
+        /// <inheritdoc />
         public TournamentEndpoint(GraphQLClient graphQlClient) : base(graphQlClient)
         {
         }
 
+        /// <inheritdoc />
         public Task<Tournament> GetByIdAsync(int id)
         {
             var queryString =
@@ -28,9 +31,14 @@ namespace smashgg.net.Logic.Querys.Tournaments
             return ExecuteQueryAsync<Tournament>(graphQlRequest, "tournament");
         }
 
+        /// <inheritdoc />
         public Task<Tournament> GetBySlugAsync(string slug)
         {
-
+            if (string.IsNullOrWhiteSpace(slug))
+            {
+                throw new ArgumentException($"{nameof(slug)} can not be null or empty.");
+            }
+            
             var queryString  = "query TournamentQuery($slug: String) {tournament(slug: $slug){" + TournamentSchema.BasicTournamentSchema + "}}";
 
             var graphQlRequest = new GraphQLRequest
@@ -42,7 +50,8 @@ namespace smashgg.net.Logic.Querys.Tournaments
             return ExecuteQueryAsync<Tournament>(graphQlRequest, "tournament");
         }
 
-        public async Task<List<Event>> GetEventsByTournamentIdAsync(int tournamentId)
+        /// <inheritdoc />
+        public async Task<IEnumerable<Event>> GetEventsByTournamentIdAsync(int tournamentId)
         {
             var queryString = "query TournamentEvents($id: ID!){tournament(id: $id){\nevents{\n"+ EventSchema.BasicEventSchema+"}}}";
 
@@ -53,7 +62,7 @@ namespace smashgg.net.Logic.Querys.Tournaments
             };
 
             var tournament = await ExecuteQueryAsync<Tournament>(graphQlRequest, "tournament");
-            return tournament.Events;
+            return tournament?.Events;
         }
     }
 }
