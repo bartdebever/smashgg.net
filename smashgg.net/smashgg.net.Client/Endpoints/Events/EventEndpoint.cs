@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using GraphQL.Client;
 using GraphQL.Common.Request;
 using smashgg.net.Models.Events;
+using smashgg.net.Querys.Querys;
 
 namespace smashgg.net.Logic.Endpoints.Events
 {
@@ -15,12 +16,9 @@ namespace smashgg.net.Logic.Endpoints.Events
 
         public async Task<IEnumerable<Standing>> GetEventStandings(int eventId, int pageCount, int page)
         {
-            var queryString =
-                "query EventStandings($eventId: ID!, $page: Int!, $perPage: Int!) {\n  event(id: $eventId) {\name\nstandings(query:{\nperPage: $perPage,\npage: $page\n}){\nnodes {\nstanding\nentrant{\nname}}}}}";
-
             var graphQlRequest = new GraphQLRequest
             {
-                Query = queryString,
+                Query = EventQuerys.GetStandingsForEvent,
                 Variables = new {eventId, perPage = pageCount, page}
             };
             

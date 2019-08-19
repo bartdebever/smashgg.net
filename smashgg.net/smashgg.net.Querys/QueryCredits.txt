@@ -1,0 +1,8 @@
+Most of the querys used in smashgg.net are from smashgg.js and smashgg.py both are written by BrandonCookeDev.
+https://github.com/BrandonCookeDev/smashgg.js/tree/master/src/v4/ts/lib/scripts
+All credits for these scripts go to him.
+
+Other querys may be taken from examples out of the smash.gg developer portal.
+
+All querys are properly credited in the source.
+A compiled list of querys will be made for a future repository.
