@@ -4,7 +4,7 @@ using GraphQL.Client;
 using GraphQL.Common.Request;
 using smashgg.net.Models.Events;
 
-namespace smashgg.net.Logic.Querys.Events
+namespace smashgg.net.Logic.Endpoints.Events
 {
     public class EventEndpoint : GraphQlEndpoint, IEventEndpoint
     {

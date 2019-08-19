@@ -7,7 +7,7 @@ using smashgg.net.Logic.Schemas;
 using smashgg.net.Models.Events;
 using smashgg.net.Models.Tournaments;
 
-namespace smashgg.net.Logic.Querys.Tournaments
+namespace smashgg.net.Logic.Endpoints.Tournaments
 {
     public class TournamentEndpoint : GraphQlEndpoint, ITournamentEndpoint
     {

@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using smashgg.net.Models.Events;
 using smashgg.net.Models.Tournaments;
 
-namespace smashgg.net.Logic.Querys.Tournaments
+namespace smashgg.net.Logic.Endpoints.Tournaments
 {
     public interface ITournamentEndpoint
     {

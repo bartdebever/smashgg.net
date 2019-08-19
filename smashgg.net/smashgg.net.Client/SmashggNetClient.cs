@@ -3,8 +3,8 @@ using System.Threading.Tasks;
 using GraphQL.Client;
 using GraphQL.Common.Request;
 using GraphQL.Common.Response;
-using smashgg.net.Logic.Querys.Events;
-using smashgg.net.Logic.Querys.Tournaments;
+using smashgg.net.Logic.Endpoints.Events;
+using smashgg.net.Logic.Endpoints.Tournaments;
 
 namespace smashgg.net.Logic
 {

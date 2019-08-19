@@ -6,7 +6,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\smashgg.net.Logic\smashgg.net.Logic.csproj" />
+      <ProjectReference Include="..\smashgg.net.Client\smashgg.net.Client.csproj" />
     </ItemGroup>
 
 </Project>

@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using GraphQL.Client;
 using GraphQL.Common.Request;
 
-namespace smashgg.net.Logic.Querys
+namespace smashgg.net.Logic.Endpoints
 {
     public abstract class GraphQlEndpoint
     {
